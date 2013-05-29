@@ -45,8 +45,8 @@ def main():
             print("Fixing functional " + fname)
             fixnifti.fixup_nifti_file(fname, 'f', TR, SLICE_AXIS, slice_times)
         for anat_fname in subject['anatomicals']:
-            print("Fixing anatomical " + anat_fname)
-            fixnifti.fixup_nifti_file(anat_fname)
+            print("No need fixing anatomical for slice timing" + anat_fname)
+            # fixnifti.fixup_nifti_file(anat_fname, "identical_to_")
 
 
 if __name__ == '__main__':
